@@ -82,6 +82,51 @@
                 </tr>
             </form>
         </table>
+        <br>
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan=5>
+                        Таблица попаданий
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        field: X
+                    </td>
+                    <td>
+                        field: Y
+                    </td>
+                    <td>
+                        field: R
+                    </td>
+                    <td>
+                        date and time
+                    </td>
+                    <td>
+                        result
+                    </td>
+                    <script>
+                        // $sdd_db_host="localhost";
+                        // $sdd_db_name="НАЗВАНИЕ-БАЗЫ-ДАННЫХ";
+                        // $sdd_db_user="ПОЛЬЗОВАТЕЛЬ";
+                        // $sdd_db_pass="ПАРОЛЬ";
+                        // @mysql_connect($sdd_db_host,$sdd_db_user,$sdd_db_pass);
+                        // @mysql_select_db($sdd_db_name);
+                        // $result=mysql_query("SELECT * FROM `НАЗВАНИЕ ТАБЛИЦЫ`");
+                        // while ($row=mysql_fetch_array($result))
+                        // { // выводим данные
+                        //     echo "<tr>\n<td>".$row["ID"]."</td>"."\n"."<td>"."".$row["name"]."
+                        // </td>"."\n"."<td>"."".$row["Nik"]."</td>"."\n"."<td>"."".$row
+                        //     ["hobby"]."</td>"."\n"."<td>"."".$row["city"]."</td>"."\n"."<td>
+                        //     "."".$row["country"]."</td>"."\n"."<td>"."".$row["email"]."</td>".
+                        //     "\n"."<td>"."".$row["data"]."</td>"."\n"."</tr>"."\n";
+                        // }
+                        // mysql_close();
+                    </script>
+                </tr>
+            </tbody>
+        </table>
     </body>
 
     <footer>Все права защищены мной</footer>

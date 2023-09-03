@@ -10,12 +10,12 @@ $('form').submit(function(e) {
     e.preventDefault();
     let form = $(this);
 
-    $.ajax({
+    jQuery.ajax({
         url: 'server_ex.php',
         type: 'GET',
         data: form.serialize(),
         success: function(data) {
-            // alert(data);
+            alert(data);
             // $('.result').html('<table class=".result">' + data + '</table>')
         },
         error: function() {
