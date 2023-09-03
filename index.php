@@ -82,32 +82,11 @@
                 </tr>
             </form>
         </table>
-        <br>
-        <table>
+        <table class="database_table">
             <tbody>
-                <tr>
-                    <td colspan=5>
-                        Таблица попаданий
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        field: X
-                    </td>
-                    <td>
-                        field: Y
-                    </td>
-                    <td>
-                        field: R
-                    </td>
-                    <td>
-                        date and time
-                    </td>
-                    <td>
-                        result
-                    </td>
-                </tr>
-                <?php include 'database.php'; ?>
+                <div>
+                    <?php include 'database.php'; ?>
+                </div>
             </tbody>
         </table>
 

@@ -53,8 +53,44 @@ function check_hit($X, $Y, $R)
     }
 }
 
+function add_database($x, $y, $r, $result, $date, $time){
+    $host = "localhost"; // Адрес сервера PostgreSQL
+    $port = "5432"; // Порт PostgreSQL
+    $dbname = "web";
+    $user = "postgres";
+    $password = "trahal tvoy mamu";
+    // Подключение к базе данных
+    $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+
+    if (!$conn) {
+        die("Ошибка подключения к базе данных: " . pg_last_error());
+    }
+    // Выполнение SQL-запроса для извлечения данных
+    //$query = "INSERT INTO hits VALUES($x, $y, $r, $result, $date, $time)";
+    $query = "INSERT INTO hits VALUES($x, $y, $r, $result, '$date', '$time')";
+    $result = pg_query($conn, $query);
+
+    if (!$result) {
+        die("Ошибка выполнения запроса: " . pg_last_error());
+    }
+    // Закрываем соединение
+    pg_close($conn);
+
+}
+
 $x = $_GET["x"];
 $y = $_GET["y"];
 $r = $_GET["r"];
+$result = 0;
 
-echo check_hit($x, $y, $r);
+if(check_hit($x, $y, $r)){
+    $result = 1;
+}
+
+date_default_timezone_set('Europe/Moscow');
+$date = date('Y-m-d');
+$time = date('H:i:s');
+
+add_database($x, $y, $r, $result, $date, $time);
+
+echo include 'database.php';
