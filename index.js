@@ -15,8 +15,7 @@ $('form').submit(function(e) {
         type: 'GET',
         data: form.serialize(),
         success: function(data) {
-            alert(data);
-            // $('.result').html('<table class=".result">' + data + '</table>')
+            $('.database_table').html(data);
         },
         error: function() {
             alert('ERROR');
