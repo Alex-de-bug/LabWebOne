@@ -1,9 +1,10 @@
 <?php
+
 $host = "localhost";
 $port = "5432";
 $dbname = "web";
 $user = "postgres";
-$password = "trahal tvoy mamu";
+$password = "123говна";
 
 
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
@@ -42,14 +43,15 @@ result
                     </td>
                 </tr>";
 
-while ($row = pg_fetch_assoc($result)) {
-    echo "<tr>
-            <td>" . $row["X"] . "</td>
-            <td>" . $row["Y"] . "</td>
-            <td>" . $row["R"] . "</td>
-            <td>" . $row["date"] . " " . $row["time"] ."</td>
-            <td>" . $row["result"] . "</td>
-          </tr>";
-}
+ while ($row = pg_fetch_assoc($result)) {
+        echo "<tr>
+                <td>" . $row["X"] . "</td>
+                <td>" . $row["Y"] . "</td>
+                <td>" . $row["R"] . "</td>
+                <td>" . $row["date"] . " " . $row["time"] ."</td>
+                <td>" . $row["result"] . "</td>
+              </tr>";
+    }
+
 pg_close($conn);
 

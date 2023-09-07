@@ -33,31 +33,31 @@
                         <fieldset>
                             <legend>x:</legend>
 
-                            <input type="radio" id="btn_radio_1" name="x" value="-4" />
+                            <input type="radio" id="btn_radio_1" name="x" value="-4" required/>
                             <label for="btn_radio_1">-4</label>
 
-                            <input type="radio" id="btn_radio_2" name="x" value="-3" />
+                            <input type="radio" id="btn_radio_2" name="x" value="-3" required/>
                             <label for="btn_radio_2">-3</label>
 
-                            <input type="radio" id="btn_radio_3" name="x" value="-2" />
+                            <input type="radio" id="btn_radio_3" name="x" value="-2" required/>
                             <label for="btn_radio_3">-2</label>
 
-                            <input type="radio" id="btn_radio_4" name="x" value="-1" />
+                            <input type="radio" id="btn_radio_4" name="x" value="-1" required/>
                             <label for="btn_radio_4">-1</label>
 
-                            <input type="radio" id="btn_radio_5" name="x" value="0" />
+                            <input type="radio" id="btn_radio_5" name="x" value="0" required/>
                             <label for="btn_radio_5">0</label>
 
-                            <input type="radio" id="btn_radio_6" name="x" value="1" />
+                            <input type="radio" id="btn_radio_6" name="x" value="1" required/>
                             <label for="btn_radio_6">1</label>
 
-                            <input type="radio" id="btn_radio_7" name="x" value="2" />
+                            <input type="radio" id="btn_radio_7" name="x" value="2" required/>
                             <label for="btn_radio_7">2</label>
 
-                            <input type="radio" id="btn_radio_8" name="x" value="3" />
+                            <input type="radio" id="btn_radio_8" name="x" value="3" required/>
                             <label for="btn_radio_8">3</label>
 
-                            <input type="radio" id="btn_radio_9" name="x" value="4" />
+                            <input type="radio" id="btn_radio_9" name="x" value="4" required/>
                             <label for="btn_radio_9">4</label>
                         </fieldset>
                     </td>
@@ -68,7 +68,7 @@
                         <button type="button" class="button_R" onclick="showValue(4)">4</button>
                         <button type="button" class="button_R" onclick="showValue(5)">5</button>
                         <div class="result_R">R </div>
-                        <input type="hidden" id="param_r" name="r" value="">
+                        <input type="hidden" id="param_r" name="r" value="" required>
                     </td>
                 </tr>
                 <tr>
@@ -78,6 +78,11 @@
                     </td>
                     <td>
                         <input class="submit-button" type="submit" value="Проверка результата">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input class="clear_table" type="button" value="Очистить таблицу">
                     </td>
                 </tr>
             </form>
@@ -102,6 +107,7 @@
         form.value = value;
     }
 </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="index.js"></script>
 

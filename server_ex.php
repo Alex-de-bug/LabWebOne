@@ -58,7 +58,7 @@ function add_database($x, $y, $r, $result, $date, $time){
     $port = "5432";
     $dbname = "web";
     $user = "postgres";
-    $password = "trahal tvoy mamu";
+    $password = "123говна";
     $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
     if (!$conn) {
@@ -77,6 +77,7 @@ function add_database($x, $y, $r, $result, $date, $time){
 $x = $_GET["x"];
 $y = $_GET["y"];
 $r = $_GET["r"];
+$y = (float)$y;
 $result = 0;
 
 if(check_hit($x, $y, $r)){
