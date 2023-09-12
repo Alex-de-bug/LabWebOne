@@ -58,7 +58,7 @@ function add_database($x, $y, $r, $result, $date, $time){
     $port = "5432";
     $dbname = "web";
     $user = "postgres";
-    $password = "123говна";
+    $password = "123";
     $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
     if (!$conn) {

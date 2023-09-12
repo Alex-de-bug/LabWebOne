@@ -1,5 +1,5 @@
 $('form').submit(function(e) {
-
+    let x = Number.parseInt($('#param_x').val());
     let y = $('#y').val();
     y = Number.parseFloat(y);
     if (isNaN(Number.parseFloat(y)) || Number.parseFloat(y) < -3 || Number.parseFloat(y) > 3) {
@@ -14,6 +14,7 @@ $('form').submit(function(e) {
         return;
     }
 
+    drawPoint(x,y,r);
     e.preventDefault();
     let form = $(this);
 

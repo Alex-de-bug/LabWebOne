@@ -10,12 +10,27 @@
 
         img {width: 400px;}
         #y {width: 160px}
+        button:hover{
+            background-color: aqua;
+        }
+        .clear_table:hover{
+            background-color: red;
+            color: azure;
+        }
+        .submit-button:hover{
+            background-color: green;
+            color: azure;
+        }
+        #coordinate-system:hover{
+            width: 600px;
+        }
 
-        table {text-align: center; border: 1px solid black; display: inline-block}
+        table {text-align: center; border: 1px solid black; display: inline-block; font-family: .AppleSystemUIFont;}
         .main_table {text-align: center;}
         td, th {border: 1px solid black}
         th {font-family: fantasy; color: rebeccapurple;}
-
+        #coordinate-system {
+        }
     </style>
 </head>
     <div class = "main_table"></div>
@@ -25,7 +40,8 @@
                 <th colspan=2>Дениченко Александр Олегович P3212 2214 </th>
             </tr>
             <td colspan=2>
-                <img src="images/pic.png"/>
+<!--                <img src="images/pic.png"/>-->
+                <canvas id="coordinate-system"></canvas>
             </td>
             <form method="get">
                 <tr>
@@ -33,32 +49,34 @@
                         <fieldset>
                             <legend>x:</legend>
 
-                            <input type="radio" id="btn_radio_1" name="x" value="-4" required/>
+                            <input type="radio" id="btn_radio_1" name="x" value="-4" required onclick="showValueX(-4)"/>
                             <label for="btn_radio_1">-4</label>
 
-                            <input type="radio" id="btn_radio_2" name="x" value="-3" required/>
+                            <input type="radio" id="btn_radio_2" name="x" value="-3" required onclick="showValueX(-3)"/>
                             <label for="btn_radio_2">-3</label>
 
-                            <input type="radio" id="btn_radio_3" name="x" value="-2" required/>
+                            <input type="radio" id="btn_radio_3" name="x" value="-2" required onclick="showValueX(-2)"/>
                             <label for="btn_radio_3">-2</label>
 
-                            <input type="radio" id="btn_radio_4" name="x" value="-1" required/>
+                            <input type="radio" id="btn_radio_4" name="x" value="-1" required onclick="showValueX(-1)"/>
                             <label for="btn_radio_4">-1</label>
 
-                            <input type="radio" id="btn_radio_5" name="x" value="0" required/>
+                            <input type="radio" id="btn_radio_5" name="x" value="0" required onclick="showValueX(0)"/>
                             <label for="btn_radio_5">0</label>
 
-                            <input type="radio" id="btn_radio_6" name="x" value="1" required/>
+                            <input type="radio" id="btn_radio_6" name="x" value="1" required onclick="showValueX(1)"/>
                             <label for="btn_radio_6">1</label>
 
-                            <input type="radio" id="btn_radio_7" name="x" value="2" required/>
+                            <input type="radio" id="btn_radio_7" name="x" value="2" required onclick="showValueX(2)"/>
                             <label for="btn_radio_7">2</label>
 
-                            <input type="radio" id="btn_radio_8" name="x" value="3" required/>
+                            <input type="radio" id="btn_radio_8" name="x" value="3" required onclick="showValueX(3)"/>
                             <label for="btn_radio_8">3</label>
 
-                            <input type="radio" id="btn_radio_9" name="x" value="4" required/>
+                            <input type="radio" id="btn_radio_9" name="x" value="4" required onclick="showValueX(4)"/>
                             <label for="btn_radio_9">4</label>
+                            <div class="result_X">X </div>
+                            <input type="hidden" id="param_x" name="x" value="" required>
                         </fieldset>
                     </td>
                     <td>
@@ -99,16 +117,10 @@
 
     <footer>Все права защищены мной</footer>
 
-<script>
-    function showValue(value) {
-        var resultDiv = document.querySelector(".result_R");
-        resultDiv.innerHTML = "R = "+value;
-        var form = document.querySelector("#param_r");
-        form.value = value;
-    }
-</script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="index.js"></script>
+    <script src="decart.js"></script>
+    <script src="button_sim.js"></script>
 
 </html>
