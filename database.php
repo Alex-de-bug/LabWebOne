@@ -4,7 +4,7 @@ $host = "localhost";
 $port = "5432";
 $dbname = "web";
 $user = "postgres";
-$password = "123";
+$password = "0426186";
 
 
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
@@ -21,7 +21,7 @@ if (!$result) {
 }
 
 echo "<tr>
-                    <td colspan=5>
+                    <td colspan=6>
     Таблица попаданий
 </td>
                 </tr>
@@ -41,9 +41,12 @@ date and time
                     <td>
 result
                     </td>
+                    <td>
+                    execute time
+                    </td>
                 </tr>";
 $ans = '';
- while ($row = pg_fetch_assoc($result)) {
+while ($row = pg_fetch_assoc($result)) {
 //        echo "<tr>
 //                <td>" . $row["X"] . "</td>
 //                <td>" . $row["Y"] . "</td>
@@ -51,8 +54,8 @@ $ans = '';
 //                <td>" . $row["date"] . " " . $row["time"] ."</td>
 //                <td>" . $row["result"] . "</td>
 //              </tr>";
-     $ans= "<tr><td>" . $row["X"] . "</td><td>" . $row["Y"] . "</td><td>" . $row["R"] . "</td><td>" . $row["date"] . " " . $row["time"] ."</td><td>" . $row["result"] . "</td></tr>" . $ans;
-    }
+    $ans= "<tr><td>" . $row["X"] . "</td><td>" . $row["Y"] . "</td><td>" . $row["R"] . "</td><td>" . $row["date"] . " " . $row["time"] ."</td><td>" . $row["result"] ."</td><td>" . $row["timer"] . "</td></tr>" . $ans;
+}
 echo $ans;
 pg_close($conn);
 
